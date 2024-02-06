@@ -1,0 +1,249 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.hero_section{
+    height: 200vh;
+    width: 100%;
+    background-color: #000000;
+    color: whitesmoke;
+}
+
+#myForm .row{
+  width: 100%;
+  
+  
+}
+#myForm .form-control{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+@media (min-width: 1080px) and (max-width: 1600px) {
+#myForm{
+  margin-left: 250px;
+}
+
+ }
+ @media (min-width: 320px) and (max-width: 480px) {
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    width: 300px !important;
+    min-height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+  }
+
+.distinct-option {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  .related-cities {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .distinct-option:hover .related-cities {
+    display: block;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    /* width: 400px; */
+    min-height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000000;
+   
+  }
+
+  .property{
+    text-transform: capitalize;
+  }
+
+.sup{
+  padding-left: 5px;
+}
+
+
+  #cardContainer .card .table{
+    margin-top: 40px;
+  }
+
+
+
+
+
+  #cardContainer .card p{
+    font-size: 30px;
+  }
+  #cardContainer .card p:nth-child(1){
+    margin-top: 10px;
+  }
+  #cardContainer .card p:nth-child(2),p:nth-child(3){
+    display: none;
+  }
+  .speakers-button{
+    width:150px!important;
+    height: 40px!important;
+    margin-left: -40px;
+  }
+
+
+
+.spacker_section{
+  background-color: #000000;
+  height: 120vh;
+}
+
+.table{
+  color:white!important;
+}
+  
+
+ .table {
+  text-align: center;
+  margin-bottom: 40px;
+}
+ .table th {
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 20px;
+  text-align: center;
+}
+ .table td {
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  background: #f1f1f1;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000;
+  padding: 10px 20px;
+}
+ .table thead th {
+  padding: 15px 20px;
+  text-align: center;
+  background: #ffba00 !important;
+}
+ .table tr th {
+  background: #f1f1f1;
+}
+
+@media  (max-width:576px){
+  .table {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 10px!important;
+  }
+   .table th {
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 5px;
+    text-align: center;
+  }
+   .table td {
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    background: #f1f1f1;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px!important;
+    color: #666666;
+    padding: 10px 20px;
+  }
+   .table thead th {
+    padding: 2px 5px;
+    text-align: center;
+    background: #ffba00 !important;
+  }
+   .table tr th {
+    background: #f1f1f1;
+  }
+  .search-form{
+    margin-left: 10%;
+  }
+  .speakers-button{
+    margin-left: 50px;
+  }
+
+  
+}
+
+.back-btn-link a{
+  text-decoration: none;
+  color: rgb(8, 8, 8) !important;
+}
+
+
+table.dataTable thead .sorting_asc {
+background-color: #ffba00;
+  
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  cursor: default;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+  color: rgb(195 26 26) !important;
+}
+#contact-table_length{
+  display: none;
+}
+.dataTables_filter{
+  display: block !important;
+  margin-bottom: 18px;
+ 
+}
+
+.dataTables_filter label{
+  color: rgb(252, 252, 252);
+  font-size: 20px;
+}
+.dataTables_filter input{
+   border: 3px solid rgb(255, 252, 252) !important;
+   color: white;
+}
+
+
+.dataTables_wrapper .dataTables_info {
+  clear: both;
+  float: left;
+  padding-top: 10px;
+  color: white !important;
+}
+
+
+#contact-table_previous{
+  color: white !important;
+}
+#contact-table_next{
+  color: white !important;
+}
+
+
+
+.satsang-data{
+    text-align: center !important
+}
