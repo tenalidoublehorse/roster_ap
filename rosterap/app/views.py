@@ -10,7 +10,6 @@ def index(request):
         countySel = request.POST.get('countySel')
         stateSel = request.POST.get('stateSel')
         dateinput = request.POST.get('dateinput')
-      
         # datetime_object = datetime.combine(datetime.strptime(dateinput, "%Y-%m-%d").date(), datetime.min.time())
         start_date = datetime.strptime(dateinput, "%Y-%m-%d")
         end_date = start_date + timezone.timedelta(days=1)
