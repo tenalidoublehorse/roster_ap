@@ -12,3 +12,13 @@ class Satsangdata(models.Model):
 
     def __str__(self):
         return self.Name
+    
+
+class Speakers(models.Model):
+    Name = models.CharField(max_length=100)
+    Phonenumber = models.CharField(max_length=10)
+    Place = models.CharField(max_length=100)
+    a_Date = models.DateTimeField(default=datetime.now())
+
+    def __str__(self):
+        return self.Name
