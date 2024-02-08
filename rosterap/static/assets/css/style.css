@@ -257,3 +257,14 @@ background-color: #ffba00;
   color: red !important;
 }
 
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
+.fas{
+  font-family:"Font Awesome 6 Pro";
+}
+
+.tbtn{
+  background-color:red !important;
+}

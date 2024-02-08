@@ -13,7 +13,7 @@ def index(request):
         # datetime_object = datetime.combine(datetime.strptime(dateinput, "%Y-%m-%d").date(), datetime.min.time())
         start_date = datetime.strptime(dateinput, "%Y-%m-%d")
         end_date = start_date + timezone.timedelta(days=1)
-        oSatsang = Satsangdata.objects.filter(CountySel=countySel,StateSel=stateSel,Date__range=(start_date, end_date))
+        oSatsang = Satsangdata.objects.filter(Area=countySel,Satsang=stateSel,Date__range=(start_date, end_date))
     return render(request, 'uifiles/index.html',{'oSatsangdata':oSatsang}) 
 
 

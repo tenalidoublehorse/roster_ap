@@ -6,7 +6,8 @@ from .models import Satsangdata,Speakers
 # Register your models here.
 
 class AdminSatsangdata(admin.ModelAdmin):
-    list_display = ['Name','CountySel','StateSel','Date']
+    list_display = ['Name','Area','Satsang','Date']
+
 
 class AdminSpeakers(admin.ModelAdmin):
     list_display = ['Name','Phonenumber','Place','a_Date']

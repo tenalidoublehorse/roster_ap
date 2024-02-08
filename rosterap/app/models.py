@@ -5,8 +5,8 @@ from datetime import datetime
 
 class Satsangdata(models.Model):
     Name = models.CharField(max_length=100)
-    CountySel = models.CharField(max_length=50)
-    StateSel = models.CharField(max_length=50)
+    Area = models.CharField(max_length=50)
+    Satsang = models.CharField(max_length=50)
     Date = models.DateTimeField(default= datetime.now()) 
 
 
