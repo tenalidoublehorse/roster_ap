@@ -138,4 +138,35 @@ window.onload = function () {
 
 
 
+$(document).ready(function(){
+    $('#myForm').submit(function(){
+        let countySel = $('#countySel').val()
+        let stateSel = $('#stateSel').val()
+        let dateinput = $('#dateinput').val()
 
+
+        let data = new FormData()
+        data.append('countySel',countySel)
+        data.append('stateSel',stateSel)
+        data.append('dateinput',dateinput)
+
+        $.ajax({
+            type:'POST',
+            url:'/',
+            processData:false,
+            contentType:false,
+            cache:false,
+            data:data,
+            success:function(data){
+                
+            },
+            error:function(data){
+                
+            }
+
+
+        })
+        
+        
+     })
+})
