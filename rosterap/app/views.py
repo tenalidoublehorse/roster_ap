@@ -3,6 +3,8 @@ from .models import Satsangdata
 from datetime import datetime
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
+from django.core.serializers import serialize
+from django.http import JsonResponse
 # Create your views here.
 @csrf_exempt
 def index(request):
@@ -14,6 +16,8 @@ def index(request):
         start_date = datetime.strptime(a_dateinput, "%Y-%m-%d")
         end_date = start_date + timezone.timedelta(days=1)
         oSatsang = Satsangdata.objects.filter(Area=a_countySel,Satsang=s_stateSel,Date__range=(start_date, end_date))
+        serialized_data = serialize('json', oSatsang)
+        return JsonResponse(serialized_data, safe=False)
     return render(request, 'uifiles/index.html',{'oSatsangdata':oSatsang}) 
 
 

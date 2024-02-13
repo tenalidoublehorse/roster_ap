@@ -139,7 +139,7 @@ window.onload = function () {
 
 
 $(document).ready(function(){
-    $('#myForm').submit(function(){
+    $('#searchBtn').click(function(){
         let countySel = $('#countySel').val()
         let stateSel = $('#stateSel').val()
         let dateinput = $('#dateinput').val()
@@ -157,11 +157,11 @@ $(document).ready(function(){
             contentType:false,
             cache:false,
             data:data,
-            success:function(data){
-                
+           success: function(response) {
+                displaySatsangData(response);
             },
-            error:function(data){
-                
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
             }
 
 
@@ -169,4 +169,25 @@ $(document).ready(function(){
         
         
      })
+
+     function displaySatsangData(data) {
+        $('#satsangData').empty();
+        dataArray = JSON.parse(data);
+        if (Array.isArray(dataArray)) {
+            dataArray.forEach(function(item) {
+                $('#satsangData').append(`
+                    <tr>
+                        <td>${item.fields.Name}</td>
+                        <td>${item.fields.Area}</td>
+                        <td>${item.fields.Satsang}</td>
+                        <td>${item.fields.Date}</td>
+                    </tr>
+                `);
+            });
+        } else {
+            console.error("Data is not an array.");
+        }
+    }
 })
+
+
