@@ -7,7 +7,7 @@ from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
 class AdminSatsangdata(ImportExportModelAdmin):
-    list_display = ['Name','Area','Satsang','Phonenumber','Place','Date']
+    list_display = ['Name','Area','Satsang','Phonenumber','Date']
     list_filter = ['Date','Name','Phonenumber']
     actions = ['export_to_csv']
     def export_to_csv(self, request,queryset):

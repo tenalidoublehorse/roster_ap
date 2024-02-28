@@ -8,7 +8,7 @@ class Satsangdata(models.Model):
     Area = models.CharField(max_length=50)
     Satsang = models.CharField(max_length=50)
     Phonenumber = models.CharField(max_length=10,null=True, default="")
-    Place = models.CharField(max_length=100,null=True, default="")
+    # Place = models.CharField(max_length=100,null=True, default="")
     Date = models.DateField() 
 
 
